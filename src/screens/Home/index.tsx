@@ -14,6 +14,7 @@ import { MoviesCard } from '../../components/MoviesCard'
 import {  MOVIESORIGINALS } from '../../../utils/moviesOriginals'
 import { MOVIESANIMATION} from '../../../utils/moviesAnimation'
 import { MOVIESHEROES } from '../../../utils/moviesHeroes';
+import { MOVIESTERROR } from '../../../utils/moviesTerror';
 
 
 const Home = () => {
@@ -180,7 +181,7 @@ const Home = () => {
         <Text style={styles.movieText}> <Text style={styles.movieTextTitle}>Prime</Text> — Filmes de Terror</Text>
 
         <FlatList
-          data={MOVIESANIMATION}
+          data={MOVIESTERROR}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => <MoviesCard movieURL={item.moviesURL} />}
           horizontal
@@ -188,28 +189,7 @@ const Home = () => {
           showsHorizontalScrollIndicator={false}
         />
 
-        <Text style={styles.movieText}> <Text style={styles.movieTextTitle}>Prime</Text> — Filmes românticos</Text>
-
-        <FlatList
-          data={MOVIESANIMATION}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <MoviesCard movieURL={item.moviesURL} />}
-          horizontal
-          contentContainerStyle={styles.contentList}
-          showsHorizontalScrollIndicator={false}
-        />
-
-        <Text style={styles.movieText}> <Text style={styles.movieTextTitle}>Prime</Text> — Filmes de ação e aventura</Text>
-
-        <FlatList
-          data={MOVIESANIMATION}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <MoviesCard movieURL={item.moviesURL} />}
-          horizontal
-          contentContainerStyle={styles.contentList}
-          showsHorizontalScrollIndicator={false}
-        />
-
+       
       </ScrollView>
     </SafeAreaView >
   );
