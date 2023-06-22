@@ -11,8 +11,8 @@ import MarioSuper from '../../assets/images/mario_super.png'
 import amazon_prime from '../../assets/images/amazon_prime.png'
 import { MOVIESRECOMENDED } from '../../../utils/moviesRecomended'
 import { MoviesCard } from '../../components/MoviesCard'
-import {  MOVIESORIGINALS } from '../../../utils/moviesOriginals'
-import { MOVIESANIMATION} from '../../../utils/moviesAnimation'
+import { MOVIESORIGINALS } from '../../../utils/moviesOriginals'
+import { MOVIESANIMATION } from '../../../utils/moviesAnimation'
 import { MOVIESHEROES } from '../../../utils/moviesHeroes';
 import { MOVIESTERROR } from '../../../utils/moviesTerror';
 
@@ -24,9 +24,9 @@ const Home = () => {
 
   const handleCategoryPress = (category) => {
     if (selectedCategory === category) {
-      setSelectedCategory(null); // Desmarca a categoria se ela já estiver selecionada
+      setSelectedCategory(null); 
     } else {
-      setSelectedCategory(category); // Marca a categoria selecionada
+      setSelectedCategory(category);
     }
   };
 
@@ -41,14 +41,14 @@ const Home = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-      <Image style={styles.title} source={amazon_prime} />
+        <Image style={styles.title} source={amazon_prime} />
         <View style={styles.iconsContainer}>
           <TouchableOpacity>
-          <MaterialCommunityIcons style={styles.iconsStyle} name="monitor-share" size={24} color="white" />
+            <MaterialCommunityIcons style={styles.iconsStyle} name="monitor-share" size={24} color="white" />
           </TouchableOpacity>
 
           <TouchableOpacity>
-          <FontAwesome style={styles.iconsStyle} name="user-circle" size={24} color="white" />
+            <FontAwesome style={styles.iconsStyle} name="user-circle" size={24} color="white" />
           </TouchableOpacity>
         </View>
 
@@ -119,11 +119,7 @@ const Home = () => {
             Esportes
           </Text>
         </TouchableOpacity>
-
-
-
       </View>
-
 
       <ScrollView showsVerticalScrollIndicator={false} style={styles.contentMovies}>
 
@@ -131,15 +127,13 @@ const Home = () => {
           <Image style={styles.movieThumbnailImg} source={MarioSuper} />
         </TouchableOpacity>
 
-
-
         <Text style={styles.movieText}> <Text style={styles.movieTextTitle}>Prime</Text> — Filmes Recomendados</Text>
 
         <FlatList
           data={MOVIESRECOMENDED}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => 
-          <MoviesCard movieURL={item.moviesURL} />}
+          renderItem={({ item }) =>
+            <MoviesCard movieURL={item.moviesURL} />}
           horizontal
           contentContainerStyle={styles.contentList}
           showsHorizontalScrollIndicator={false}
@@ -189,7 +183,7 @@ const Home = () => {
           showsHorizontalScrollIndicator={false}
         />
 
-       
+
       </ScrollView>
     </SafeAreaView >
   );

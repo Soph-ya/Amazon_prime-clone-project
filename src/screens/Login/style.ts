@@ -7,6 +7,11 @@ login: {
   paddingTop: -100,
 },
 
+ForgotText: {
+  textAlign:"right", 
+  color: '#399EEE',
+},
+
   loginText: {
     fontSize: 40,
     fontWeight: "700",

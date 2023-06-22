@@ -22,7 +22,7 @@ const Login = () => {
       </View>
       <View >
       <TouchableOpacity style={styles.passwordText}>
-        <Text>Esqueci a senha</Text>
+        <Text  style={styles.ForgotText}>Esqueci a senha</Text>
         </TouchableOpacity>
         <Input
           placeHolder="E-mail ou número de telefone"
@@ -30,9 +30,6 @@ const Login = () => {
           onChangeText={setEmail}
           hide={false}
         />
-
-
-
         <View style={styles.passwordContainer}>
           <Input
             placeHolder="Senha Amazon"
